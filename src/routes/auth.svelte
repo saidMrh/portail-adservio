@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import { tick } from 'svelte'
     import { LockIcon, GithubIcon } from 'svelte-feather-icons'
     import { auth } from '$lib/supabase'

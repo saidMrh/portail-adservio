@@ -58,7 +58,7 @@ import Columns from '$lib/components/blog/Columns.svelte'
     <div class="w-full mb-4 flex flex-col place-items-center">
         <div class="banner flex flex-col place-items-center  mb-2">
        
-            <h3 class="text-6xl  mb-10 mt-1 0">Portail entreprise Adservio</h3>
+            <h3 class="text-6xl  mb-10 mt-1 0">Tremplin handicap</h3>
             <div class="hidden">
                 <h2 >Starter Kit</h2>
                 <small class="uppercase font-semibold text-gray-800 mt-4"> Typescript - TailwindCSS - <small class="bg-teal-200 text-teal-800 px-2">Supabase</small> Authentication + Profile - Alert, <a href="/" on:click|preventDefault={showModal}>Modal</a>, <a href="/" on:click|preventDefault={showModalSide}>Sidepanel</a>, 

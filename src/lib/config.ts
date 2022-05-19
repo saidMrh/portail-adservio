@@ -4,14 +4,14 @@ export const config = {
 
 export const siteSeoBase = {
     title: '❤️ My Adservio',
-    description: 'Portail entreprise Adservio',
+    description: 'Tremplin Association',
     keywords: 'svelte, svelte-kit, starter-kit, typescript, supabase',
     canonical: import.meta.env ? import.meta.env.VITE_SITE_URL : 'https://www.adservio.fr'
 };
 
 export const siteSeoOpenGraphBase = {
     title: 'My Adservio',
-    description: 'Portail entreprise Adservio',
+    description: 'Tremplin Association',
     url: import.meta.env ? import.meta.env.VITE_SITE_URL : '',
     type: 'website',
     images: [

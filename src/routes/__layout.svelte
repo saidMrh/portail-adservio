@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import '../tailwind.css';
 	import '../app.css';
 	import { navigating } from '$app/stores';

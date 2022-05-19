@@ -222,7 +222,7 @@
           </li>
           <li>
             <div class="flex items-center space-x-4 lg:space-x-6">
-              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/Oumaima.png" alt="">
+              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/oumaima.png" alt="">
               <div class="font-medium text-lg leading-6 space-y-1">
                 <h5>Leslie Alexander</h5>
                 <p class="">Co-Founder / CEO</p>
@@ -231,7 +231,7 @@
           </li>
           <li>
             <div class="flex items-center space-x-4 lg:space-x-6">
-              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/Ghassen.png" alt="">
+              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/ghassen.png" alt="">
               <div class="font-medium text-lg leading-6 space-y-1">
                 <h5>Leslie Alexander</h5>
                 <p class="">Co-Founder / CEO</p>
@@ -258,7 +258,7 @@
           </li>
           <li>
             <div class="flex items-center space-x-4 lg:space-x-6">
-              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/SarahY.png" alt="">
+              <img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="images/avatars/sarahy.png" alt="">
               <div class="font-medium text-lg leading-6 space-y-1">
                 <h5>Leslie Alexander</h5>
                 <p class="">Co-Founder / CEO</p>

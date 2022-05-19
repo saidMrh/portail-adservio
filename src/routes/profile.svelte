@@ -1,44 +1,8 @@
-<script lang="typescript" context="module">
-    import { API_AUTH, ROUTE_HOME } from '$lib/constants'
 
-    function response(user) {
-        if (user && !user.guest) {
-            return {
-                props: {
-                    user
-                }
-            };
-        } else {
-            return {
-                redirect:  ROUTE_HOME,
-                status: 302
-            }
-        }
-    }
-
-    export async function load({ fetch, session }) {
-        // Approach #1 - Call the session getter API
-		const res = await fetch(API_AUTH);
-		if (res.ok) {
-            const { user } = await res.json();
-            return response(user)
-        } else {
-            return {
-                status: res.status,
-                error: new Error(`Could not load ${API_AUTH}`)
-            };
-        }
-
-        // Approach #2 - Use the session parameter (refer hooks/index.ts to see how it got populated)
-        // const { user } = session
-        // return response(user)
-    }
-</script>
-
-<script lang="typescript">
+<script lang="ts">
     import { onMount } from 'svelte'
     import { ChromeIcon } from 'svelte-feather-icons'
-    import type{ ProfileAttrs } from '$lib/user'
+    import type { ProfileAttrs } from '$lib/user'
     import { signOut, getCurrUserProfile, updCurrUserProfile, updCurrUserAvatar, getAvatar, profile } from '$lib/user'
     import { handleAlert } from '$lib/alert'
     import Seo from '$lib/components/SEO.svelte'
@@ -141,6 +105,43 @@
 
     export let user /* When using approach #3 (client-side user session) comment this out and replace `user` with `(dollar)user` in the template */
 </script>
+<script lang="ts" context="module">
+    import { API_AUTH, ROUTE_HOME } from '$lib/constants'
+
+    function response(user) {
+        if (user && !user.guest) {
+            return {
+                props: {
+                    user
+                }
+            };
+        } else {
+            return {
+                redirect:  ROUTE_HOME,
+                status: 302
+            }
+        }
+    }
+
+    export async function load({ fetch, session }) {
+        // Approach #1 - Call the session getter API
+		const res = await fetch(API_AUTH);
+		if (res.ok) {
+            const { user } = await res.json();
+            return response(user)
+        } else {
+            return {
+                status: res.status,
+                error: new Error(`Could not load ${API_AUTH}`)
+            };
+        }
+
+        // Approach #2 - Use the session parameter (refer hooks/index.ts to see how it got populated)
+        // const { user } = session
+        // return response(user)
+    }
+</script>
+
 <Seo title="Profile"/>
 <div class="flex flex-col justify-center items-center relative">
     <div class="p-2 flex flex-col place-items-center">

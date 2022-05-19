@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
 	import '../tailwind.css';
     import { navigating } from '$app/stores'
     import PageNavIndicator from '$lib/components/PageNavIndicator.svelte'
