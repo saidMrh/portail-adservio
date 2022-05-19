@@ -1,0 +1,134 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Write your global styles here, in PostCSS syntax */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Rubik:wght@300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* purge start ignore */
+@layer base {
+
+    .link {
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+        @apply link--metis capitalize;
+    }
+    
+    .link::before,
+    .link::after {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: currentColor;
+        top: 100%;
+        left: 0;
+        pointer-events: none;
+    }
+    
+    .link::before {
+        content: '';
+        /* show by default */
+    }
+
+ 
+    .link--metis {
+        text-transform: lowercase;
+    }
+    
+    .link--metis::before {
+        transform-origin: 100% 50%;
+        transform: scale3d(0, 1, 1);
+        transition: transform 0.3s;
+    }
+    
+    .link--metis:hover::before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+    }
+
+    .link--kale:hover::before {
+        opacity: 1;
+        animation: lineUp 0.3s ease forwards;
+    }
+    .card-zoom-image {
+        @apply   transition-all duration-700 ease-in-out transform bg-center bg-cover object-cover cursor-pointer;
+    }
+    .card-zoom {
+        @apply overflow-hidden cursor-pointer ;
+    }
+    .card-zoom:hover .card-zoom-image {
+        @apply scale-110;
+      }
+
+    body {
+        @apply antialiased ;
+        @apply leading-normal tracking-normal text-base font-normal break-words text-slate-400;
+        @apply font-sans text-base lg:text-xl;
+    }
+
+    main {
+        @apply p-8 pt-32 md:pt-24 ;
+       
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-black font-header font-extrabold;
+    }
+    
+    h1 {
+        @apply text-6xl ;
+    }
+    h2 {
+        @apply text-5xl ;
+    }
+    h3 {
+        @apply text-4xl ;
+    }
+    h4 {
+        @apply text-3xl ;
+    }
+    h5 {
+        @apply text-2xl ;
+    }
+    h6 {
+        @apply text-xl ;
+    }
+    
+    
+    
+    
+    a {
+        @apply text-slate-500 font-semibold antialiased  hover:text-black transition-colors duration-100 ;
+    }
+   
+    .nav__item a {
+        @apply link link--metis capitalize text-sm 
+    }
+
+    button {
+        @apply py-2 px-8 rounded-full border-2 border-gray-200 hover:border-black  text-sm font-semibold text-black  font-header  
+        hover:bg-black hover:text-white transition hover:shadow-xl  duration-200 capitalize;
+        @apply cursor-pointer focus:outline-none;
+    }
+
+    .badge {
+        @apply bg-adservio pt-1 pb-1 pl-4 font-extrabold font-mono pr-4 hover:bg-blue-100 hover:text-adservio text-white transition-all ease-in-out duration-500 text-xs;
+    }
+
+    .card {
+        @apply flex flex-col rounded-lg border border-gray-100 hover:shadow-2xl transition-all duration-500 overflow-hidden card-zoom;
+    }
+}
+  
+  /* purge end ignore */
